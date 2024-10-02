@@ -1,5 +1,3 @@
-Here’s a basic template for your GitHub README for the **Hibir** app:
-
 ---
 
 # Hibir App
