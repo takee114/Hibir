@@ -44,7 +44,7 @@ Hibir is a mobile application developed using Flutter for the frontend, Laravel 
 2. **Backend Setup:**
    - Navigate to the `hibir` backend folder:
      ```bash
-     cd hibir_backend
+     cd backend
      ```
    - Install dependencies:
      ```bash
@@ -71,7 +71,7 @@ Hibir is a mobile application developed using Flutter for the frontend, Laravel 
 3. **Frontend Setup (Flutter):**
    - Navigate to the `hibir_frontend` folder:
      ```bash
-     cd hibir_frontend
+     cd frontend
      ```
    - Install dependencies:
      ```bash
