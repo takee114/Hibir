@@ -2,37 +2,55 @@
 
 # Hibir App
 
-Hibir is a mobile application developed using Flutter for the frontend, Laravel as the backend, and MySQL as the database. The app is designed to provide a platform for users to share cultural posts and interact through comments and likes.
+Hibir is a mobile application developed using Flutter for the frontend, Laravel as the backend, and MySQL as the database. The app is designed to provide a platform where users can share cultural posts and engage through comments and likes, fostering community interaction.
 
 ## Features
 
-- **User Authentication**: Secure login and registration system with JWT authentication.
-- **Post Management**: Users can create, edit, and delete posts with video or image attachments.
-- **Comments and Likes**: Interaction features for commenting on and liking posts.
-- **Real-Time Notifications**: Users receive notifications for new comments or likes on their posts.
-- **Responsive UI**: Flutter-based mobile app that is smooth and responsive.
-- **RESTful API**: Laravel backend with API routes for communication with the frontend.
-  
+- **User Authentication**: Secure login and registration system using JWT authentication.
+- **Post Management**: Users can create, edit, and delete posts, supporting both image and video attachments.
+- **Comments and Likes**: Users can comment on and like posts to interact with each other.
+- **Real-Time Notifications**: Instant notifications for comments and likes on user posts.
+- **Admin Dashboard**: An admin interface for managing users and content.
+- **Responsive UI**: Flutter-based mobile app for a seamless experience across Android and iOS devices.
+- **RESTful API**: The backend is powered by Laravel, providing APIs for the mobile app.
+
 ## Tech Stack
 
 ### Frontend
-- **Flutter**: Cross-platform mobile app framework for Android and iOS.
+- **Flutter**: Cross-platform mobile app framework.
   
 ### Backend
-- **Laravel**: PHP framework used to build the API and manage the backend logic.
-- **MySQL**: Relational database for storing user and app data.
+- **Laravel**: PHP framework for backend logic and API development.
+- **MySQL**: Relational database to store user and application data.
 
 ### Additional Tools
-- **Shared Preferences**: For storing authentication tokens and session data on the client side.
-- **http**: For making API requests to the Laravel backend.
+- **Shared Preferences**: Used to store authentication tokens locally on the client side.
+- **HTTP**: For making requests from the Flutter frontend to the Laravel backend.
+
+## Screenshots
+
+### Admin Dashboard
+![Admin Dashboard - View 1](frontend/assets/images/Admin%20Dashboard_1.jpg "Admin Dashboard - Overview")
+
+![Admin Dashboard - View 2](frontend/assets/images/Admin%20Dashboard_2.jpg "Admin Dashboard - Users Management")
+
+![Admin Dashboard - View 3](frontend/assets/images/Admin%20Dashboard_3.jpg "Admin Dashboard - Content Moderation")
+
+### User Interface
+![Sign Up Screen](frontend/assets/images/sign%20up.jpg "User Sign Up Screen")
+
+![Profile Screen](frontend/assets/images/profile.jpg "User Profile Screen")
+
+## Documentation
+For a detailed overview of the project, including the design process and technical specifications, you can refer to the [Hibir App Documentation](frontend/assets/Hibir.pptx).
 
 ## Installation
 
 ### Prerequisites
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [XAMPP or MySQL](https://www.apachefriends.org/index.html) for database management.
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) for the frontend.
+- [XAMPP](https://www.apachefriends.org/index.html) or MySQL for database management.
 - [Composer](https://getcomposer.org/download/) to install Laravel dependencies.
-- A web server like XAMPP or Laravel's built-in server.
+- A local server environment like XAMPP or Laravel's built-in server.
 
 ### Steps
 
@@ -41,17 +59,17 @@ Hibir is a mobile application developed using Flutter for the frontend, Laravel 
    git clone https://github.com/takee114/Hibir.git
    ```
 
-2. **Backend Setup:**
-   - Navigate to the `hibir` backend folder:
+2. **Backend Setup (Laravel):**
+   - Navigate to the `backend` folder:
      ```bash
      cd backend
      ```
-   - Install dependencies:
+   - Install Laravel dependencies:
      ```bash
      composer install
      ```
-   - Configure your `.env` file with your database details:
-     ```
+   - Configure the `.env` file with your database settings:
+     ```env
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
      DB_PORT=3306
@@ -59,48 +77,46 @@ Hibir is a mobile application developed using Flutter for the frontend, Laravel 
      DB_USERNAME=your_username
      DB_PASSWORD=your_password
      ```
-   - Run migrations:
+   - Run database migrations:
      ```bash
      php artisan migrate
      ```
-   - Start the Laravel server:
+   - Start the Laravel development server:
      ```bash
      php artisan serve
      ```
 
 3. **Frontend Setup (Flutter):**
-   - Navigate to the `hibir_frontend` folder:
+   - Navigate to the `frontend` folder:
      ```bash
      cd frontend
      ```
-   - Install dependencies:
+   - Install Flutter dependencies:
      ```bash
      flutter pub get
      ```
-   - Run the app:
+   - Run the Flutter app:
      ```bash
      flutter run
      ```
 
 ## API Endpoints
 
-| Method | Endpoint        | Description                |
-|--------|-----------------|----------------------------|
-| POST   | `/api/login`     | Log in a user              |
-| POST   | `/api/register`  | Register a new user        |
-| GET    | `/api/posts`     | Get all posts              |
-| POST   | `/api/posts`     | Create a new post          |
-| PUT    | `/api/posts/:id` | Update a post              |
-| DELETE | `/api/posts/:id` | Delete a post              |
+| Method | Endpoint          | Description                     |
+|--------|-------------------|---------------------------------|
+| POST   | `/api/login`       | Log in a user                   |
+| POST   | `/api/register`    | Register a new user             |
+| GET    | `/api/posts`       | Fetch all posts                 |
+| POST   | `/api/posts`       | Create a new post               |
+| PUT    | `/api/posts/:id`   | Update a post by ID             |
+| DELETE | `/api/posts/:id`   | Delete a post by ID             |
 
 ## Contribution
 
-Feel free to submit issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+Feel free to contribute by submitting issues or pull requests. For significant changes, kindly open an issue first to discuss the proposed updates.
 
 ## License
 
-[MIT License](LICENSE)
+This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-You can adjust it based on your specific project details. If you need to include more advanced features or sections, feel free to ask!
