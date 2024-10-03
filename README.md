@@ -37,9 +37,11 @@ Hibir is a mobile application developed using Flutter for the frontend, Laravel 
 ![Admin Dashboard - View 3](frontend/assets/images/Admin%20Dashboard_3.jpg "Admin Dashboard - Content Moderation")
 
 ### User Interface
-![Sign Up Screen](frontend/assets/images/sign%20up.jpg "User Sign Up Screen")
 
-![Profile Screen](frontend/assets/images/profile.jpg "User Profile Screen")
+<p align="center">
+  <img src="frontend/assets/images/sign%20up.jpg" alt="Sign Up Screen" width="300">
+  <img src="frontend/assets/images/profile.jpg" alt="User Profile Screen" width="300">
+</p>
 
 ## Documentation
 For a detailed overview of the project, including the design process and technical specifications, you can refer to the [Hibir App Documentation](frontend/assets/Hibir.pptx).
